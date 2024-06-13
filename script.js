@@ -2,10 +2,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChocie() {
-  // Get a random value from 1 to 3 
   let choice = Math.ceil(Math.random() * 3);
 
-  // Return rock, paper, or scissors depending on value (3 possible options)
   switch(choice) {
     case 1: return "rock";
     case 2: return "paper";
@@ -14,17 +12,13 @@ function getComputerChocie() {
 }
 
 function getHumanChoice() {
-  // Prompt user for a choice between rock, paper, or scissors
   let choice = prompt("Rock, Paper, or Scissors?");
   return choice;
 }
 
 function playRound(humanChoice, computerChoice) {
-  // Take care of case sensitivity for user input
   humanChoice = humanChoice.toLowerCase();
 
-
-  // Logic for rock, paper, scissors
   if(humanChoice===computerChoice) {
     console.log("You Tie! No Points Added");
   }
@@ -41,13 +35,11 @@ function playRound(humanChoice, computerChoice) {
 
 
 function win(humanChoice, computerChoice) {
-  // Add to human score
   humanScore++;
   console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
 }
 
 function lose(humanChoice, computerChoice) {
-  // Add to computer score
   computerScore++;
   console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
 }
