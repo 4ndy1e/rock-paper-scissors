@@ -18,6 +18,13 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
+  console.log(humanChoice);
+
+  if(humanChoice !== "rock" && humanChoice !== "scissors" && humanChoice != "paper") {
+    console.log("Please chooce between rock, paper, or scissors");
+    playRound(getHumanChoice(), getComputerChocie());
+    return;
+  }
 
   if(humanChoice===computerChoice) {
     console.log("You Tie! No Points Added");
